@@ -1,0 +1,279 @@
+html,body,section,nav,header,footer,ul,li,h1,h2,h3,h4,div,p,aside,img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 55px "Kegger", sans-serif; 
+  -webkit-font-smoothing: antialiased;
+  background-color: #9ecad0;
+  color: #e6eaeb;
+}
+
+.main {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+nav {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1080px;
+  height: 154px;
+  transform: translateX(-50%);
+  background: url(images/star.png) no-repeat 35% center, url(images/star.png) no-repeat 68% center;
+  background-color: #9ecad0;
+}
+nav a {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  color: #e6eaeb;
+  text-decoration: none;
+}
+
+.page {
+  padding-top: 154px;
+}
+
+.stella {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 196px;
+  height: 190px;
+  margin: 0 auto;
+  background-image: url(images/stella_bg.png);
+  background-size: 100% 100%;
+}
+.stella img {
+  display: block;
+  width: 58px;
+  animation: stalla 2s linear infinite;
+}
+
+.thought,
+.styles {
+  display: block;
+  margin: 0 auto;
+}
+
+.username {
+  margin-top: 15px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.page-title {
+  margin-bottom: 30px;;
+  line-height: 60px;
+  text-align: center;
+  font-family: "FreightNeoProBook Italic"; 
+}
+
+.styles-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0 30px;
+  line-height: 1;
+  text-align: center;
+}
+
+.intro-box {
+  margin-top: 60px;
+}
+.intro-box h4 {
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.project-box {
+  position: relative;
+  width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+.project-box .projects {
+  display: inline-block;
+  padding: 13px 15px 97px;
+  background-image: url(images/pc.png);
+  background-size: 100% 100%;
+}
+.project-box .ul-box {
+  width: 364px;
+  height: 213px;
+  overflow: hidden;  
+}
+.project-box ul {
+  width: 400%;
+  height: 100%;
+  font-size: 0;
+  transition: transform 1s;
+}
+.project-box ul.show1 {
+  transform: translateX(0%);
+}
+.project-box ul.show2 {
+  transform: translateX(-25%);
+}
+.project-box ul.show3 {
+  transform: translateX(-50%);
+}
+.project-box ul.show4 {
+  transform: translateX(-75%);
+}
+.project-box ul li {
+  display: inline-block;
+  width: 25%;
+  height: 100%;
+}
+.project-box ul li img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.project-box .prev,
+.project-box .next {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  background-image: url(images/arrow.png);
+  background-size: 100% 200%;
+  transform: translateY(-50%);
+}
+.project-box .prev {
+  left: 0;
+  background-position: 0 0;
+}
+.project-box .next {
+  right: 0;
+  background-position: 0 100%;
+}
+
+.video-box video {
+  display: block;
+  width: 480px;
+  height: 320px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.video-box {
+  position: relative;
+  padding-bottom: 50.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-box iframe,
+.video-box object,
+.video-box embed {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+footer {
+  margin-top: 90px;
+  background-color: #30bbcc;
+  font-size: 22px;
+  line-height: 2;
+  text-align: center;
+}
+footer .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px 0 200px;
+}
+footer .info .intro {
+  margin-right: 10px;
+}
+footer .info .intro span {
+  font-size: 24px;
+}
+footer .ways {
+  display: flex;
+}
+footer .ways .fb,
+footer .ways .be {
+  display: block;
+  width: 65px;
+  height: 65px;
+  margin: 30px 0 20px;
+  background-size: 100% 100%;
+}
+footer .ways .fb {
+  margin-right: 40px;
+  background-image: url(images/fb.png);
+}
+footer .ways .be {
+  margin-left: 40px;
+  background-image: url(images/be.png);
+}
+
+@keyframes stalla{
+	to {
+	  transform: rotateY(360deg);
+	}
+}
+
+
+@media screen and (max-width: 1000px) {
+  .styles-type {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    flex-direction: column;
+    background-position: 5%, 95%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .project-box {
+    width: 100%;
+  }
+  .video-box video {
+    width: 90%;
+    height: 150px;
+  }
+  footer .info {
+    flex-direction: column;
+  }
+  .thought,
+  .styles {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 30px;
+  }
+  .project-box .projects {
+    padding: 0;
+    background: none;
+  }
+  .project-box .ul-box {
+    width: 300px;
+    height: 176px;
+  }
+}
